@@ -1,0 +1,69 @@
+.top-links {
+  text-align: center;
+  padding: 20px 0;
+
+  a {
+    text-decoration: none;
+    color: #0099ff;
+    margin-left: 32px;
+
+    &.active {
+      color: black;
+      cursor: default;
+    }
+  }
+}
+
+.c-dashboard {
+  margin: 8px 16px;
+
+  .c-dashboard__header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .c-dashboard__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.c-filters__container {
+  margin: 0 0 8px;
+  padding: 16px 8px;
+  border: 1px solid #dcdee3;
+  background-color: #e5e9f1;
+}
+
+.c-chart__container {
+  height: 350px;
+  width: 760px;
+}
+
+.c-button {
+  height: 40px;
+  background-color: #0099ff;
+  color: white;
+  min-width: 120px;
+  padding: 0 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-button__loader {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-left-color: black;
+  border-radius: 50%;
+  animation: loader 0.5s linear infinite;
+
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

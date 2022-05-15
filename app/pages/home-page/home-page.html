@@ -1,0 +1,24 @@
+<div class="c-dashboard">
+  <div class="c-filters__container">
+    <v-filter-search
+      v-on-update-search="homePageVm.updateSearch"
+    ></v-filter-search>
+  </div>
+
+  <employees-list
+    employees-list="homePageVm.employees"
+    search="homePageVm.searchText"
+  ></employees-list>
+
+  <div class="c-dashboard__footer">
+    <button
+      class="c-button"
+      ng-if="homePageVm.currentPage <= homePageVm.totalPages"
+      ng-click="homePageVm.loadMoreEmplyees()"
+      ng-disabled="homePageVm.loading"
+    >
+      <div ng-if="!homePageVm.loading">Load More</div>
+      <div ng-if="homePageVm.loading" class="c-button__loader"></div>
+    </button>
+  </div>
+</div>
